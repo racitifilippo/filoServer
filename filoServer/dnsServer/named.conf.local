@@ -1,0 +1,4 @@
+zone "nagoya-foundation.com" {
+    type master;
+    file "/etc/bind/zones/db.nagoya-foundation.com";
+};
