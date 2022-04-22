@@ -1,5 +1,7 @@
 # filoServer
 
+<b>Ovviamente bisogna aver installato docker sulla macchina</b>
+
 Questa cartella contiene due servizi: <b>SSH, Web Server</b>. 
 
 Per avviare i servizi che vuoi esegui il file <b>start.py</b> e segui la procedura guidata.
