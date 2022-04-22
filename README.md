@@ -1,11 +1,17 @@
 # filoServer
 
-Questa cartella contiene tre servizi: SSH, Web Server e una bossa di un server DNS (ancora in via di sviluppo). 
+Questa cartella contiene due servizi: <br>SSH, Web Server</br>. 
 
-Per creare i vari containers creare una finestra di terminale nella cartella e digitare --> docker-compose up -d --build
+Per avviare i servizi che vuoi esegui il file <br>start.py</br> e segui la procedura guidata.
 
-Dopo aver creato i vari containers, dobbiamo startarli manualmente entrando in ogni containers e digitanto nella sua riga di comando:
-  - Per quanto riguarda il container <b>SSH</b> bisogna scrivere --> service ssh start
-  - Per il servizio <b>Web Server</b> dobbiamo scrivere --> service apache2 start
+Per stoppare i containers eseguire il file <br>stop.py</br>.
 
-Nella prossima versione ci sara un modo per inserire automaticamente i file del Web Server da una cartella che ci sara nei file del progetto alla sua cartella apposita nel container. 
+
+<br>Web Server</br>:
+ - porta 80 dell'host e 80 del container
+ - nella cartella html inserire i file della tua webapp
+ - il webServer utilizzato è apache2. bisogna entrare nel container per modificare i file di apache
+
+<br>SSH Server</br>:
+ - porta 22 dell'host e 22 del container
+ - il servizio ssh utilizzato è openssh-server
