@@ -15,3 +15,4 @@ Per stoppare i containers eseguire il file <b>stop.py</b>.
 <b>SSH Server</b>:
  - porta 22 dell'host e 22 del container
  - il servizio ssh utilizzato è openssh-server
+ - la password di default è '<b>ciao</b>'. Per <b>cambiare la password</b> bisogna modificare il file start.py e sostituire la parola 'ciao' alle righe 67 e 68 con la password desiderata.
