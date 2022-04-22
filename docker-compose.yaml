@@ -1,0 +1,42 @@
+version: "3.9"
+
+services:
+  SSHServer:
+    build:
+      context: ./SSHServer
+      dockerfile: Dockerfile
+    ports:
+      - "22:22"
+    image: debian_ssh
+    stdin_open: true
+    tty: true
+    privileged: true
+    networks:
+      netServer_ext:
+        ipv4_address: 192.168.2.15
+    
+
+  webServer:
+    build:
+      context: ./webServer
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    #  - "443:443"
+    image: debian_web-server
+    stdin_open: true
+    tty: true
+    privileged: true
+    networks:
+      netServer_ext:
+        ipv4_address: 192.168.2.80
+   
+
+
+networks:
+  netServer_ext:
+   driver: bridge
+   ipam:
+    driver: default
+    config:
+     - subnet: 192.168.2.0/24

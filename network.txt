@@ -1,0 +1,7 @@
+networks:
+  netServer_ext:
+   driver: bridge
+   ipam:
+    driver: default
+    config:
+     - subnet: 192.168.2.0/24
